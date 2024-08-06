@@ -12,7 +12,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "maheshwaribhavesh95863@gmail.com"
 app_license = "MIT"
-app_logo_url = '/assets/whitelabel/images/whitelabel_logo.png'
+app_logo_url = '/assets/whitelabel/images/whitelabel_logo.jpg'
 
 # Includes in <head>
 # ------------------
@@ -123,6 +123,10 @@ boot_session = "whitelabel.api.boot_session"
 
 # before_tests = "whitelabel.install.before_tests"
 
+fixtures = [
+    {"dt": "Custom Field", "filters": [["Translation","source_text","like","%ERPNext%"]]}
+]
+
 # Overriding Methods
 # ------------------------------
 #
@@ -137,10 +141,7 @@ boot_session = "whitelabel.api.boot_session"
 # 	"Task": "whitelabel.task.get_dashboard_data"
 # }
 
-override_whitelisted_methods = {
-    "frappe.utils.change_log.show_update_popup": "whitelabel.api.ignore_update_popup"
-}
+# override_whitelisted_methods = {
+# 	"frappe.utils.change_log.show_update_popup": "whitelabel.api.ignore_update_popup"
+# }
 
-fixtures = [
-    'Whitelabel Setting'
-]
